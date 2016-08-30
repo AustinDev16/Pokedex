@@ -13,6 +13,7 @@
 		FA6E68C01D75E678000E3DE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6E68BF1D75E678000E3DE1 /* Assets.xcassets */; };
 		FA6E68C31D75E678000E3DE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6E68C11D75E678000E3DE1 /* LaunchScreen.storyboard */; };
 		FA6E68CB1D75EA5E000E3DE1 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E68CA1D75EA5E000E3DE1 /* Pokemon.swift */; };
+		FA6E68CD1D75F273000E3DE1 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E68CC1D75F273000E3DE1 /* NetworkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FA6E68C21D75E678000E3DE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA6E68C41D75E678000E3DE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA6E68CA1D75EA5E000E3DE1 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pokemon.swift; path = ../Pokemon.swift; sourceTree = "<group>"; };
+		FA6E68CC1D75F273000E3DE1 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		FA6E68AC1D75E678000E3DE1 = {
 			isa = PBXGroup;
 			children = (
+				FA6E68CC1D75F273000E3DE1 /* NetworkController.swift */,
 				FA6E68B71D75E678000E3DE1 /* Pokedex */,
 				FA6E68B61D75E678000E3DE1 /* Products */,
 			);
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6E68CD1D75F273000E3DE1 /* NetworkController.swift in Sources */,
 				FA6E68BB1D75E678000E3DE1 /* ViewController.swift in Sources */,
 				FA6E68B91D75E678000E3DE1 /* AppDelegate.swift in Sources */,
 				FA6E68CB1D75EA5E000E3DE1 /* Pokemon.swift in Sources */,
