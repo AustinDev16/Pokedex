@@ -13,6 +13,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        PokemonController.fetchPokemon("pikachu") { (pokemon) in
+            dispatch_async(dispatch_get_main_queue(), { 
+                print("finished")
+                print(pokemon!.name)
+                
+            })
+        }
     }
 
     override func didReceiveMemoryWarning() {
