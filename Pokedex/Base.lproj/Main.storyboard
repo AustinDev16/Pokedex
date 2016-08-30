@@ -1,25 +1,71 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SUQ-5l-3tl">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Pokemon Search View Controller-->
+        <scene sceneID="O5i-oK-0UL">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SUQ-5l-3tl" customClass="PokemonSearchViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="jn8-hu-itm"/>
+                        <viewControllerLayoutGuide type="bottom" id="2dX-tM-X0a"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="gkI-Ry-oss">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="SPH-F2-LAx">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="SUQ-5l-3tl" id="Ukd-Us-LVz"/>
+                                </connections>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abilities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fE-ea-a7b">
+                                <rect key="frame" x="270" y="329.5" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwF-yI-CCu">
+                                <rect key="frame" x="292" y="289.5" width="17" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eL-N4-b82">
+                                <rect key="frame" x="277.5" y="246.5" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SPH-F2-LAx" firstAttribute="leading" secondItem="gkI-Ry-oss" secondAttribute="leading" id="3x8-wG-TOD"/>
+                            <constraint firstItem="9fE-ea-a7b" firstAttribute="centerX" secondItem="PwF-yI-CCu" secondAttribute="centerX" id="DhT-t3-Jg7"/>
+                            <constraint firstAttribute="trailing" secondItem="SPH-F2-LAx" secondAttribute="trailing" id="QqG-2Q-Mic"/>
+                            <constraint firstItem="PwF-yI-CCu" firstAttribute="centerX" secondItem="gkI-Ry-oss" secondAttribute="centerX" id="U30-YX-Y6P"/>
+                            <constraint firstItem="9fE-ea-a7b" firstAttribute="top" secondItem="PwF-yI-CCu" secondAttribute="bottom" constant="19" id="UMF-4p-jJl"/>
+                            <constraint firstItem="PwF-yI-CCu" firstAttribute="centerY" secondItem="gkI-Ry-oss" secondAttribute="centerY" id="b5b-re-Lt7"/>
+                            <constraint firstItem="SPH-F2-LAx" firstAttribute="top" secondItem="jn8-hu-itm" secondAttribute="bottom" id="c7K-BP-Gnp"/>
+                            <constraint firstItem="8eL-N4-b82" firstAttribute="centerX" secondItem="gkI-Ry-oss" secondAttribute="centerX" id="sXf-jV-yv6"/>
+                            <constraint firstItem="PwF-yI-CCu" firstAttribute="top" secondItem="8eL-N4-b82" secondAttribute="bottom" constant="22" id="tfe-Vz-w4m"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="abilitiesLabel" destination="9fE-ea-a7b" id="4VF-v6-SVx"/>
+                        <outlet property="idLabel" destination="PwF-yI-CCu" id="2lG-EY-Lj7"/>
+                        <outlet property="nameLabel" destination="8eL-N4-b82" id="SxX-ar-j2F"/>
+                        <outlet property="searchBar" destination="SPH-F2-LAx" id="RFB-qD-o8d"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PXJ-fU-qDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="320" y="74"/>
         </scene>
     </scenes>
 </document>
