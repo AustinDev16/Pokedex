@@ -21,10 +21,11 @@ class PokemonController {
             
             //deal with json
             
-            guard let data = data,
+            guard let data = data, //responseDataString = NSString(data: data, encoding: NSUTF8StringEncoding),
             let jsonAnyObject = (try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)),
-            let jsonDictionary = jsonAnyObject as? [String: AnyObject] else { completion(pokemon: nil); return}
-            
+            let jsonDictionary = jsonAnyObject as? [String: AnyObject] else {
+                completion(pokemon: nil); return}
+          
             let pokemon = Pokemon(dictionary: jsonDictionary)
             completion(pokemon: pokemon)
         }
